@@ -1,17 +1,17 @@
 const express = require('express');
 const router = express.Router();
 
-const clientController = require('../controllers/item');
+const itemController = require('../controllers/item');
 const validation = require('../middleware/validate');
 
-router.get('/', clientController.getAll);
+router.get('/', itemController.getAll);
 
-router.get('/:id', clientController.getSingle);
+router.get('/:id', itemController.getSingle);
 
-router.post('/', validation.saveItem, clientController.createItem);
+router.post('/', validation.saveItem, itemController.createItem);
 
-router.put('/:id', validation.saveItem, clientController.updateItem);
+router.put('/:id', validation.saveItem, itemController.updateItem);
 
-router.delete('/:id', clientController.deleteItem);
+router.delete('/:id', itemController.deleteItem);
 
 module.exports = router;
