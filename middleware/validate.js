@@ -1,10 +1,10 @@
 const validator = require('../helpers/validate');
 
+
 const saveClient = (req, res, next) => {
   const validationRule = {
     clientCode: 'required|string',
     firstName: 'required|string',
-    lastName: 'required|string',
     email: 'required|email',
     phoneNumber: 'required|string',
     streetAdd: 'required|string',

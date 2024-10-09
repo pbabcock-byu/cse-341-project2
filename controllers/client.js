@@ -19,10 +19,10 @@ const getAll = (req, res) => {
 
 const getSingle = (req, res) => {
     //#swagger.tags=['Client']
+    const userId = new ObjectId(req.params.id);
     if (!ObjectId.isValid(req.params.id)) {
         res.status(400).json('Must use a valid id to find a Client.');
     }
-    const userId = new ObjectId(req.params.id);
     mongodb
         .getDb()
         .db()

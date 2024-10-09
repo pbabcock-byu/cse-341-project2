@@ -4,8 +4,8 @@ GET http://localhost:3000/client
 
 
 ### Get contact by id
-GET http://localhost:3000/client/66f9f65353fd72e545799484
-
+GET http://localhost:3000/client/66fa077b663fa3711ba95809
+Content-Type: application/json
 
 ### Create contact
 POST http://localhost:3000/client HTTP/1.1
@@ -148,12 +148,12 @@ content-type: application/json
 
 # this is for items
 {"_id":"66fa1b9553fd72e545799485",
-    "foodId": "food_001",
-    "name": "Apple",
+    "foodId": "food_012",
+    "name": "Peach",
     "category": "Fruit",
-    "description": "A juicy red apple.",
-    "price": 0.5,
-    "supplier": "Orchard Farms"}
+    "description": "A Ulgy fruit",
+    "price": 0.2,
+    "supplier": "Peach Farms"}
 
 #
 

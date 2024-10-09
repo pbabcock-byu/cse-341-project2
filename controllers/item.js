@@ -59,11 +59,11 @@ const createItem= async (req, res) => {
 
 const updateItem = async (req, res) => {
     //#swagger.tags=['Items']
+    const userId = new ObjectId(req.params.id);
     // Validating to make sure the user entered a valid Mongdb ID
     if (!ObjectId.isValid(req.params.id)) {
         res.status(400).json('Must use a valid id to update an Item.');
     }
-    const userId = new ObjectId(req.params.id);
     // be aware of updateOne if you only want to update specific fields
     const item = {
         foodId: req.body.foodId,
